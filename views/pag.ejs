@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gráfico de Burbujas</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <canvas id="bubble-chart"></canvas>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const labels = ["Rebasamiento", "Ocupacional", "Poblacional"];
+        const data = {
+          labels: labels,
+          datasets: [
+            {
+              label: "Dataset 1",
+              backgroundColor: ["#38C200", "#38C200"],
+              data: [20, 1000],
+            },
+            {
+              label: "Dataset 2",
+              backgroundColor: ["#FFC100", "#FFC100"],
+              data: [30, 70],
+            },
+            {
+              label: "Dataset 3",
+              backgroundColor: ["#FF2D00", "#FF2D00"],
+              data: [20, 80],
+            },
+          ],
+        };
+
+        const ctx = document.getElementById("bubble-chart").getContext("2d");
+        const bubbleChart = new Chart(ctx, {
+          type: "bubble",
+          data: data,
+        });
+      });
+    </script>
+  </body>
+</html>

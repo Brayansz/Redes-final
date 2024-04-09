@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Antenas de Frecuencia</title>
+    <style>
+      /* Estilos CSS para mejorar la apariencia */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+        color: #333;
+      }
+      .distri {
+        width: 150px;
+        height: auto;
+        float: left;
+        display: inline-block;
+      }
+      header {
+        background-color: #003e80c7;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+      }
+      .container {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1,
+      h2 {
+        color: #000000;
+        margin-top: 20px;
+      }
+      p {
+        margin-bottom: 20px;
+      }
+      ul {
+        padding-left: 20px;
+      }
+      footer {
+        color: #000000;
+        text-align: center;
+        padding: 1px;
+        bottom: 0;
+        width: 100%;
+      }
+      form {
+        margin-top: 20px;
+        margin-bottom: 60px;
+      }
+      label {
+        color: #007bff;
+        display: block;
+        margin-bottom: 5px;
+      }
+      input[type="number"],
+      button {
+        width: calc(100% - 22px); /* considerando el ancho del borde */
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #007bff;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+      input[type="number"]:focus,
+      button:focus {
+        outline: none;
+        border-color: #0056b3;
+      }
+      button {
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img
+        src="https://estudiantes.portaloas.udistrital.edu.co/appserv/index_files/escudo_oficial_udistrital_200x194.png"
+        class="distri"
+      />
+      <h1>Antenas de Frecuencia</h1>
+    </header>
+
+    <div class="container">
+      <h2>Introducción a las Antenas de Frecuencia</h2>
+      <p>
+        Las antenas de frecuencia son dispositivos fundamentales en la
+        transmisión y recepción de señales de radiofrecuencia. Permiten la
+        comunicación inalámbrica en una amplia variedad de aplicaciones, desde
+        telecomunicaciones hasta radiodifusión.
+      </p>
+
+      <h2>Tipo de Antenas</h2>
+      <ul>
+        <li>Antenas dipolo</li>
+        <li>Antenas Yagi-Uda</li>
+        <li>Antenas de parche</li>
+        <li>Antenas helicoidales</li>
+        <li>Antenas parabólicas</li>
+      </ul>
+
+      <h2>Funcionamiento</h2>
+      <p>
+        Para hacer uso de la calculadora llene los datos solicitados en el
+        siguiente formulario
+      </p>
+    </div>
+    <div class="container">
+      <form action="/calcular" method="POST" class="container">
+        <h2>Formulario de Cálculo</h2>
+        <label for="frecuencia">Selecciona tu tipo de antena:</label>
+        <select name="opciones" id="opciones">
+          <option value="Antena FM">Antena FM</option>
+          <option value="Antena AM">Antena AM</option>
+          <option value="Antena de banda ancha">Antena de banda ancha</option>
+        </select>
+        <label for="frecuencia">Frecuencia de la antena (MHz):</label>
+        <input type="number" id="frecuencia" name="frecuencia" required />
+        <label for="altura">Altura de la antena (DESDE EL PISO) (m):</label>
+        <input type="number" id="altura" name="altura" required />
+        <label for="potencia">Potencia de la antena (W):</label>
+        <input type="number" id="potencia" name="potencia" required />
+        <label for="ganancia">Ganancia de la antena (dBi):</label>
+        <input type="number" id="ganancia" name="ganancia" required />
+        <button type="submit">Realizar cálculo</button>
+      </form>
+    </div>
+  </body>
+  <footer>
+    <p>Proyecto Segundo corte</p>
+    <p>Universidad Distrital Francisco Jose De Caldas</p>
+    <p>Redes inalambricas</p>
+  </footer>
+</html>
